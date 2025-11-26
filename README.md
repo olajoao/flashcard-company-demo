@@ -6,3 +6,6 @@
 - npm run dev
 - access your localhost on port :5173 
 - have fun
+
+Inspiration source: 
+https://roadmap.sh/projects/flash-cards
