@@ -1,0 +1,104 @@
+.app {
+  width: 100dvw;
+  height: 100dvh;
+  place-content: center;
+  place-items: center;
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .container {
+    max-width: 850px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .progress {
+      padding: 5px;
+      border: 1px solid #d1d1d1;
+      border-radius: 5px;
+
+      .bar {
+        min-width: 0;
+        background-color: royalblue;
+        border-radius: 4px;
+        height: 35px;
+        position: relative;
+        transition: 300ms width ease-in-out;
+
+        .percentage {
+          position: absolute;
+          right: 5px;
+          inset-block: 0px;
+          margin: auto;
+          display: inline;
+          width: max-content;
+          height: max-content;
+        }
+      }
+    }
+
+    .flash__cards {
+      border-radius: 7px;
+      padding: 10px;
+      border: 1px solid #aaa;
+
+      .carousel {
+        scroll-snap-type: x mandatory;
+        display: flex;
+        overflow-x: hidden;
+        position: relative;
+
+        .page {
+          position: sticky;
+          top: 5px;
+          right: 5px;
+          background-color: #212329;
+          box-shadow: 1px 3px 4px #555;
+          padding: 5px;
+          border-radius: 4px;
+          font-size: 12px;
+          min-width: 40px;
+          height: 25px;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 3px;
+        }
+      }
+
+      .question {
+        color: #fff;
+        border-radius: 5px;
+        background-color: #41484b;
+        text-align: center;
+        padding: 40px;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        min-width: 100%;
+        max-width: 100%;
+        scroll-snap-align: center;
+        flex: none;
+        height: 300px;
+      }
+
+      .arrows {
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #41484b;
+        display: flex;
+        justify-content: space-between;
+
+        .slide__btn:disabled {
+          opacity: 30;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
